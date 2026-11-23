@@ -1,0 +1,66 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../www/css/style.css">
+<style>
+  html,body{background:transparent;overflow:visible;height:auto}
+  .a{position:relative;overflow:hidden;display:none}
+  .a.on{display:block}
+  #icon{width:1024px;height:1024px;background:radial-gradient(circle at 50% 38%,#FFC36B 0%,#FF8A3D 45%,#C2410C 100%)}
+  #iconfg{width:1024px;height:1024px;background:transparent}
+  #iconbg{width:1024px;height:1024px;background:radial-gradient(circle at 50% 38%,#FFC36B 0%,#FF8A3D 45%,#C2410C 100%)}
+  .rays2{position:absolute;inset:-30%;background:repeating-conic-gradient(rgba(255,255,255,.13) 0 9deg,transparent 9deg 18deg)}
+  .dab{position:absolute;filter:drop-shadow(0 18px 18px rgba(0,0,0,.35))}
+  .pc{position:absolute;filter:drop-shadow(0 10px 10px rgba(0,0,0,.3))}
+  #splash2{width:2732px;height:2732px;background:radial-gradient(circle at 50% 40%,#FFB86B 0%,#E8590C 45%,#7A1F0E 100%)}
+  #feature{width:1024px;height:500px;background:radial-gradient(circle at 30% 45%,#FFC36B 0%,#FF8A3D 40%,#B43A0C 100%)}
+  .bigLogo{paint-order:stroke fill;position:absolute;font-family:'Baloo';font-weight:800;line-height:.86;text-align:center;color:#fff;-webkit-text-stroke:12px #7A1F0E;text-shadow:0 12px 0 #7A1F0E,0 24px 40px rgba(0,0,0,.35)}
+  .bigLogo .y{color:#FFE08A}
+  .bigLogo small{display:block;-webkit-text-stroke:0;color:#FFF3DC;text-shadow:0 4px 0 #7A1F0E;letter-spacing:2px}
+</style></head>
+<body>
+<div id="icon" class="a"><div class="rays2"></div></div>
+<div id="iconfg" class="a"></div>
+<div id="iconbg" class="a"><div class="rays2"></div></div>
+<div id="splash2" class="a"><div class="rays2"></div></div>
+<div id="feature" class="a"><div class="rays2"></div></div>
+<script src="../www/js/vendor/three.min.js"></script>
+<script src="../www/js/worlds.js"></script>
+<script src="../www/js/art.js"></script>
+<script src="../www/js/chars.js"></script>
+<script src="../www/js/art3d.js"></script>
+<script>
+MM_ART3D.build(null, 768).then(() => {
+function piece(c, size, x, y, rot, sp) {
+  const cv = sp ? MM_ART.special(c, sp, size) : MM_ART.piece(c, size);
+  const img = document.createElement('img'); img.src = cv.toDataURL(); img.className = 'pc';
+  img.style.cssText += `width:${size}px;left:${x}px;top:${y}px;transform:rotate(${rot||0}deg)`; return img;
+}
+function dabbu(w, x, y, mood) { const d = document.createElement('div'); d.className = 'dab'; d.style.cssText += `width:${w}px;left:${x}px;top:${y}px`; d.innerHTML = MM_CHARS('dabbu', mood || 'happy'); const im = d.querySelector('svg,img'); im.style.width = '100%'; return d; }
+function char(who, w, x, y) { const d = dabbu(w, x, y); d.innerHTML = MM_CHARS(who); d.querySelector('svg,img').style.width = '100%'; return d; }
+function logo(el, size, x, y, sub) { const d = document.createElement('div'); d.className = 'bigLogo'; d.style.cssText += `font-size:${size}px;left:${x}px;top:${y}px`; d.innerHTML = `<span class="y">Masala</span><br>Mela${sub ? `<small style="font-size:${size*0.32}px">${sub}</small>` : ''}`; el.appendChild(d); return d; }
+
+// App icon: Dabbu with jalebi + samosa
+const I = document.getElementById('icon');
+I.appendChild(piece(0, 360, 40, 560, -15)); I.appendChild(piece(2, 330, 650, 590, 12));
+I.appendChild(dabbu(820, 102, 40, 'wow'));
+// Adaptive foreground (safe zone = central 66%)
+const F = document.getElementById('iconfg');
+F.appendChild(piece(0, 250, 190, 560, -15)); F.appendChild(piece(2, 230, 600, 580, 12));
+F.appendChild(dabbu(560, 232, 200, 'wow'));
+// Splash
+const S = document.getElementById('splash2');
+logo(S, 300, 0, 640, 'Swaad Bachao').style.cssText += 'left:0;right:0';
+S.appendChild(dabbu(560, 1086, 1520));
+[[0, 700, 1800, -20], [2, 1500, 1880, 15], [3, 560, 2200, 30], [5, 1700, 2230, -10], [1, 980, 2350, 5], [4, 1300, 2420, -25]].forEach(a => S.appendChild(piece(a[0], 260, a[1], a[2], a[3])));
+S.insertAdjacentHTML('beforeend', '<div style="position:absolute;left:0;right:0;bottom:180px;text-align:center;color:#FFE8C2;font:600 70px Baloo">A game by Deific Digital</div>');
+// Feature graphic 1024x500
+const Fe = document.getElementById('feature');
+logo(Fe, 120, 40, 70, 'Swaad Bachao');
+Fe.appendChild(char('meethi', 230, 560, 150));
+Fe.appendChild(dabbu(220, 770, 170));
+[[0, 470, 30, -15, 'h'], [2, 900, 40, 12], [3, 480, 360, 20], [5, 920, 360, -10], [1, 690, 20, 0], [4, 700, 400, 0, null]].forEach(a => Fe.appendChild(piece(a[0], 110, a[1], a[2], a[3], a[4])));
+Fe.appendChild(piece(0, 120, 330, 360, 0, 'd'));
+window.assetsReady = true;
+});
+</script>
+</body></html>

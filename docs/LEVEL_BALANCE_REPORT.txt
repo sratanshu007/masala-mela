@@ -1,0 +1,151 @@
+Level	World	Moves	Bot win rate	Goals
+1	w1	moves 20	colors 4	win 1.00 (target 0.92)	score:44000
+2	w1	moves 15	colors 4	win 1.00 (target 0.92)	collect
+3	w1	moves 22	colors 4	win 0.95 (target 0.92)	score:49000
+4	w1	moves 15	colors 4	win 1.00 (target 0.92)	collect,collect
+5	w1	moves 15	colors 4	win 1.00 (target 0.92)	jelly
+6	w1	moves 23	colors 5 (eased)	win 0.97 (target 0.92)	score:14500
+7	w1	moves 18	colors 5	win 0.93 (target 0.92)	collect
+8	w1	moves 29	colors 5	win 0.97 (target 0.92)	jelly
+9	w1	moves 38	colors 5	win 0.95 (target 0.92)	ing
+10	w1	moves 50	colors 5	win 0.97 (target 0.92)	block:fog,score:13000
+11	w1	moves 24	colors 5	win 0.93 (target 0.92)	score:16500
+12	w1	moves 25	colors 5	win 0.93 (target 0.92)	collect
+13	w1	moves 34	colors 5	win 0.97 (target 0.92)	jelly,block:tiffin
+14	w1	moves 39	colors 5 (eased)	win 0.95 (target 0.92)	ing
+15	w1	moves 46	colors 5 (eased)	win 0.93 (target 0.92)	jelly,block:tiffin,block:fog
+16	w2	moves 20	colors 5	win 0.85 (target 0.8)	score:16500
+17	w2	moves 21	colors 5	win 0.88 (target 0.8)	collect
+18	w2	moves 28	colors 5	win 0.95 (target 0.8)	jelly
+19	w2	moves 20	colors 5	win 0.93 (target 0.8)	collect,collect
+20	w2	moves 17	colors 5	win 0.82 (target 0.68)	jelly
+21	w2	moves 33	colors 5	win 0.88 (target 0.8)	ing
+22	w2	moves 26	colors 5	win 0.88 (target 0.8)	jelly
+23	w2	moves 22	colors 5	win 0.82 (target 0.8)	score:18000
+24	w2	moves 30	colors 5	win 0.88 (target 0.8)	collect,jelly
+25	w2	moves 19	colors 5	win 0.70 (target 0.68)	jelly,score:13500
+26	w2	moves 24	colors 5	win 0.75 (target 0.8)	score:18000
+27	w2	moves 38	colors 5	win 0.95 (target 0.8)	ing,jelly
+28	w2	moves 42	colors 5	win 0.80 (target 0.8)	jelly
+29	w2	moves 15	colors 5	win 0.80 (target 0.8)	jelly
+30	w2	moves 27	colors 5	win 0.88 (target 0.68)	jelly,jelly,collect
+31	w3	moves 23	colors 5 (eased)	win 0.93 (target 0.8)	score:16000
+32	w3	moves 21	colors 5	win 0.88 (target 0.8)	collect
+33	w3	moves 19	colors 5	win 0.82 (target 0.8)	jelly
+34	w3	moves 20	colors 5	win 0.85 (target 0.8)	collect,collect
+35	w3	moves 15	colors 5	win 0.72 (target 0.68)	block:dor
+36	w3	moves 41	colors 5	win 0.80 (target 0.8)	ing
+37	w3	moves 22	colors 5	win 0.80 (target 0.8)	jelly
+38	w3	moves 23	colors 5 (eased)	win 0.82 (target 0.8)	score:16000
+39	w3	moves 39	colors 5	win 0.88 (target 0.8)	collect,block:dor
+40	w3	moves 21	colors 5	win 0.82 (target 0.68)	block:dor,score:13500
+41	w3	moves 24	colors 5	win 0.88 (target 0.8)	score:15000
+42	w3	moves 38	colors 5	win 0.95 (target 0.8)	ing,jelly
+43	w3	moves 28	colors 5	win 0.85 (target 0.8)	jelly
+44	w3	moves 20	colors 5	win 0.82 (target 0.8)	block:dor
+45	w3	moves 26	colors 5	win 0.72 (target 0.68)	jelly,block:dor,collect
+46	w4	moves 20	colors 5	win 0.75 (target 0.8)	score:8500
+47	w4	moves 24	colors 5	win 0.85 (target 0.8)	collect
+48	w4	moves 20	colors 5	win 0.88 (target 0.8)	jelly
+49	w4	moves 28	colors 5	win 0.88 (target 0.8)	collect,collect
+50	w4	moves 20	colors 5	win 0.72 (target 0.68)	block:tawa
+51	w4	moves 33	colors 5	win 0.70 (target 0.65)	ing
+52	w4	moves 21	colors 5	win 0.85 (target 0.65)	jelly
+53	w4	moves 22	colors 5	win 0.70 (target 0.65)	score:17000
+54	w4	moves 30	colors 5	win 0.68 (target 0.65)	collect,block:tawa
+55	w4	moves 17	colors 5	win 0.47 (target 0.45)	block:tawa,score:8000
+56	w4	moves 24	colors 5	win 0.88 (target 0.8)	score:17000
+57	w4	moves 33	colors 5	win 0.65 (target 0.65)	ing,jelly
+58	w4	moves 40	colors 5	win 0.68 (target 0.65)	jelly
+59	w4	moves 25	colors 5	win 0.72 (target 0.65)	block:tawa
+60	w4	moves 25	colors 5	win 0.50 (target 0.45)	jelly,block:tawa,collect
+61	w5	moves 20	colors 5	win 0.90 (target 0.8)	score:13000
+62	w5	moves 35	colors 5 (eased)	win 0.68 (target 0.65)	collect
+63	w5	moves 28	colors 6	win 0.75 (target 0.65)	jelly
+64	w5	moves 39	colors 6	win 0.75 (target 0.65)	collect,collect
+65	w5	moves 22	colors 5 (eased)	win 0.75 (target 0.65)	block:fog
+66	w5	moves 47	colors 6	win 0.70 (target 0.65)	ing
+67	w5	moves 31	colors 6	win 0.78 (target 0.65)	jelly
+68	w5	moves 22	colors 6	win 0.65 (target 0.65)	score:6500
+69	w5	moves 30	colors 5 (eased)	win 0.70 (target 0.65)	collect,block:fog
+70	w5	moves 27	colors 6	win 0.45 (target 0.45)	block:fog,score:8500
+71	w5	moves 24	colors 5	win 0.93 (target 0.8)	score:9500
+72	w5	moves 48	colors 6	win 0.75 (target 0.65)	ing,jelly
+73	w5	moves 48	colors 5 (eased)	win 0.65 (target 0.65)	jelly
+74	w5	moves 29	colors 5 (eased)	win 0.65 (target 0.65)	block:fog
+75	w5	moves 20	colors 5 (eased)	win 0.47 (target 0.45)	jelly,block:fog,collect
+76	w6	moves 20	colors 5	win 0.95 (target 0.8)	score:13000
+77	w6	moves 46	colors 6	win 0.65 (target 0.65)	collect
+78	w6	moves 26	colors 6	win 0.75 (target 0.65)	jelly
+79	w6	moves 37	colors 6	win 0.80 (target 0.65)	collect,collect
+80	w6	moves 35	colors 6	win 0.75 (target 0.65)	block:matka
+81	w6	moves 42	colors 5 (eased)	win 0.72 (target 0.65)	ing
+82	w6	moves 27	colors 6	win 0.68 (target 0.65)	jelly
+83	w6	moves 22	colors 6	win 0.72 (target 0.65)	score:8000
+84	w6	moves 28	colors 5 (eased)	win 0.70 (target 0.65)	collect,block:matka
+85	w6	moves 32	colors 6	win 0.50 (target 0.45)	block:matka,score:11500
+86	w6	moves 27	colors 5 (eased)	win 0.85 (target 0.8)	score:17500
+87	w6	moves 48	colors 6	win 0.75 (target 0.65)	ing,jelly
+88	w6	moves 46	colors 6	win 0.75 (target 0.65)	jelly
+89	w6	moves 44	colors 6	win 0.70 (target 0.65)	block:matka
+90	w6	moves 43	colors 5 (eased)	win 0.50 (target 0.45)	jelly,block:matka,collect
+91	w7	moves 20	colors 5	win 0.80 (target 0.8)	score:7500
+92	w7	moves 41	colors 6	win 0.65 (target 0.65)	collect
+93	w7	moves 38	colors 6	win 0.80 (target 0.65)	jelly
+94	w7	moves 36	colors 6	win 0.70 (target 0.65)	collect,collect
+95	w7	moves 25	colors 6	win 0.70 (target 0.65)	jelly
+96	w7	moves 30	colors 5 (eased)	win 0.72 (target 0.65)	ing
+97	w7	moves 34	colors 6	win 0.65 (target 0.65)	jelly
+98	w7	moves 15	colors 5 (eased)	win 0.88 (target 0.65)	score:10500
+99	w7	moves 50	colors 6	win 0.70 (target 0.65)	collect,jelly
+100	w7	moves 19	colors 6	win 0.53 (target 0.45)	jelly,score:8500
+101	w7	moves 24	colors 5	win 0.75 (target 0.72)	score:18500
+102	w7	moves 33	colors 5 (eased)	win 0.63 (target 0.58)	ing,jelly
+103	w7	moves 50	colors 6	win 0.57 (target 0.58)	jelly
+104	w7	moves 23	colors 6	win 0.65 (target 0.58)	jelly
+105	w7	moves 36	colors 6	win 0.38 (target 0.32)	jelly,jelly,collect
+106	w8	moves 20	colors 5	win 0.68 (target 0.72)	score:9000
+107	w8	moves 38	colors 5 (eased)	win 0.63 (target 0.58)	collect
+108	w8	moves 26	colors 6	win 0.60 (target 0.58)	jelly
+109	w8	moves 36	colors 6	win 0.75 (target 0.58)	collect,collect
+110	w8	moves 24	colors 6	win 0.68 (target 0.58)	block:handi
+111	w8	moves 46	colors 6	win 0.63 (target 0.58)	ing
+112	w8	moves 27	colors 6	win 0.70 (target 0.58)	jelly
+113	w8	moves 22	colors 6	win 0.63 (target 0.58)	score:11500
+114	w8	moves 30	colors 5 (eased)	win 0.65 (target 0.58)	collect,block:handi
+115	w8	moves 25	colors 6	win 0.47 (target 0.42)	block:handi,score:15500
+116	w8	moves 24	colors 5	win 0.72 (target 0.72)	score:22500
+117	w8	moves 44	colors 5 (eased)	win 0.68 (target 0.58)	ing,jelly
+118	w8	moves 48	colors 6	win 0.60 (target 0.58)	jelly
+119	w8	moves 31	colors 6	win 0.68 (target 0.58)	block:handi
+120	w8	moves 30	colors 6	win 0.45 (target 0.32)	jelly,block:handi,collect
+121	w9	moves 20	colors 5	win 0.72 (target 0.72)	score:14000
+122	w9	moves 50	colors 6	win 0.55 (target 0.58)	collect
+123	w9	moves 48	colors 6	win 0.70 (target 0.58)	jelly
+124	w9	moves 38	colors 6	win 0.60 (target 0.58)	collect,collect
+125	w9	moves 16	colors 6	win 0.70 (target 0.58)	block:ice
+126	w9	moves 34	colors 5 (eased)	win 0.70 (target 0.58)	ing
+127	w9	moves 21	colors 6	win 0.72 (target 0.58)	jelly
+128	w9	moves 22	colors 6	win 0.75 (target 0.58)	score:5000
+129	w9	moves 30	colors 5 (eased)	win 0.70 (target 0.58)	collect,block:ice
+130	w9	moves 15	colors 6	win 0.82 (target 0.42)	block:ice,score:4500
+131	w9	moves 27	colors 5 (eased)	win 0.72 (target 0.72)	score:20500
+132	w9	moves 50	colors 5 (eased)	win 0.63 (target 0.58)	ing,jelly
+133	w9	moves 50	colors 5 (eased)	win 0.60 (target 0.58)	jelly
+134	w9	moves 19	colors 6	win 0.63 (target 0.58)	block:ice
+135	w9	moves 37	colors 6	win 0.33 (target 0.32)	jelly,block:ice,collect
+136	w10	moves 20	colors 5	win 0.78 (target 0.72)	score:17000
+137	w10	moves 28	colors 5 (eased)	win 0.75 (target 0.58)	collect
+138	w10	moves 21	colors 6	win 0.70 (target 0.58)	jelly
+139	w10	moves 42	colors 6	win 0.60 (target 0.58)	collect,collect
+140	w10	moves 21	colors 6	win 0.72 (target 0.58)	block:ice
+141	w10	moves 33	colors 5 (eased)	win 0.70 (target 0.58)	ing
+142	w10	moves 46	colors 6	win 0.75 (target 0.58)	jelly
+143	w10	moves 22	colors 6	win 0.65 (target 0.58)	score:6500
+144	w10	moves 30	colors 5 (eased)	win 0.70 (target 0.58)	collect,block:matka
+145	w10	moves 34	colors 6	win 0.42 (target 0.42)	block:handi,score:12500
+146	w10	moves 24	colors 5	win 0.70 (target 0.72)	score:17500
+147	w10	moves 33	colors 5 (eased)	win 0.60 (target 0.58)	ing,jelly
+148	w10	moves 40	colors 6	win 0.65 (target 0.58)	jelly
+149	w10	moves 40	colors 6	win 0.63 (target 0.58)	block:tawa
+150	w10	moves 49	colors 6	win 0.38 (target 0.32)	jelly,block:matka,collect

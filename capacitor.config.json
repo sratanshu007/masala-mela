@@ -1,0 +1,27 @@
+{
+  "appId": "com.deificdigital.masalamela",
+  "appName": "Masala Mela",
+  "webDir": "www",
+  "backgroundColor": "#2B1B5A",
+  "android": {
+    "allowMixedContent": false,
+    "captureInput": true,
+    "webContentsDebuggingEnabled": false
+  },
+  "ios": {
+    "contentInset": "never",
+    "scrollEnabled": false
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 1500,
+      "launchAutoHide": false,
+      "backgroundColor": "#E8590C",
+      "androidScaleType": "CENTER_CROP",
+      "showSpinner": false,
+      "splashFullScreen": true,
+      "splashImmersive": true
+    },
+    "StatusBar": { "overlaysWebView": true, "style": "DARK" }
+  }
+}

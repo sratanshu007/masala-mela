@@ -1,0 +1,8 @@
+<!doctype html><html><head><meta charset="utf-8"></head><body style="margin:0;background:#FFE6C4">
+<div id="g" style="display:flex;gap:6px;padding:10px"></div>
+<script src="../www/js/vendor/three.min.js"></script><script src="../www/js/chars.js"></script><script src="../www/js/chars3d.js"></script>
+<script>
+MM_CHARS3D.build().then(ok => { const g = document.getElementById('g');
+  for (const k of ['meethi_happy','meethi_sad','dadi_happy','seth_angry','seth_happy','karela_happy']) { const i = new Image(); i.src = MM_CHARS3D.urls[k]; i.style.cssText='width:220px;background:#fff3e0;border-radius:16px'; g.appendChild(i); }
+  window.done = ok; });
+</script></body></html>

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Masala Mela</string>
+    <string name="title_activity_main">Masala Mela</string>
+    <string name="package_name">com.deificdigital.masalamela</string>
+    <string name="custom_url_scheme">com.deificdigital.masalamela</string>
+</resources>

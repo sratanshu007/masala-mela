@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#2B1B5A">
+<meta name="description" content="Masala Mela: Swaad Bachao — a desi food match-3 puzzle game by Deific Digital.">
+<title>Masala Mela: Swaad Bachao</title>
+<link rel="icon" href="img/icon-192.png">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="admin/admin.css">
+</head>
+<body>
+
+<!-- Splash -->
+<section id="splash" class="screen on">
+  <div class="fogcover"></div>
+  <div class="logo"><div class="l1">Masala</div><div class="l2">Mela</div><div class="l3">Swaad Bachao</div></div>
+  <div class="dabbu"></div>
+  <div class="loadwrap"><div class="loadbar"></div></div>
+  <div class="hint">Swaad dhundh rahe hain...</div>
+  <div><button id="tapStart" class="btn big orange" data-t="Shuru karo|Tap to start">Shuru karo</button></div>
+  <div class="by">A game by <b>Deific Digital</b></div>
+</section>
+
+<!-- Login -->
+<section id="login" class="screen">
+  <canvas id="loginfx"></canvas>
+  <div class="loginTop">
+    <div class="logo small"><div class="l1">Masala</div><div class="l2">Mela</div></div>
+    <div id="loginChars"></div>
+  </div>
+  <div id="loginBox" class="loginBox"></div>
+  <div id="recaptcha-box"></div>
+</section>
+
+<!-- Home / Map -->
+<section id="home" class="screen">
+  <div id="map"><div id="mapInner"></div></div>
+  <div class="topbar">
+    <button class="pill" data-open="lives"><span class="pi" data-icon="heart"></span><b data-lives>5</b><small data-lifetime></small></button>
+    <button class="pill" data-open="shop"><span class="pi" data-icon="coin"></span><b data-coins>0</b><span class="plus">+</span></button>
+    <span class="spacer"></span>
+    <button class="iconbtn" data-open="profile" aria-label="settings"><span data-icon="gear"></span></button>
+  </div>
+  <div class="side left">
+    <button class="sbtn" data-open="daily"><span data-icon="gift"></span><small data-t="Inaam|Daily">Inaam</small><i class="badge" id="dailyDot">!</i></button>
+    <button class="sbtn" data-open="inbox"><span data-icon="inbox"></span><small data-t="Daak|Inbox">Daak</small><i class="badge" id="bInbox"></i></button>
+    <button class="sbtn" data-open="leaderboard"><span data-icon="trophy"></span><small data-t="Top|Top">Top</small></button>
+    <button class="sbtn" data-open="events"><span data-icon="event"></span><small data-t="Tyohaar|Events">Tyohaar</small></button>
+  </div>
+  <div class="side right">
+    <button class="sbtn chest" id="chestBtn" data-open="chest"><span data-icon="chest"></span><small id="chestTime">--</small></button>
+    <button class="sbtn" data-open="starchest"><span data-icon="star"></span><div class="starbar" id="starBar"><i></i><span>0/30</span></div></button>
+  </div>
+  <div class="playbar"><button id="playBtn" class="btn big play">Khelo</button></div>
+  <nav class="nav">
+    <button data-open="map"><span class="ni" data-icon="map"></span><span data-t="Map|Map">Map</span></button>
+    <button data-open="missions"><span class="ni" data-icon="missions"></span><span data-t="Missions|Missions">Missions</span><i class="badge" id="bMissions"></i></button>
+    <button data-open="shop" class="mid"><span class="ni" data-icon="shop"></span><span data-t="Dukaan|Shop">Dukaan</span></button>
+    <button data-open="wheel"><span class="ni" data-icon="wheel"></span><span data-t="Chakra|Spin">Chakra</span><i class="badge" id="bWheel"></i></button>
+    <button data-open="profile"><span class="ni" data-icon="profile"></span><span data-t="Profile|Profile">Profile</span></button>
+  </nav>
+</section>
+
+<!-- Game -->
+<section id="game" class="screen">
+  <canvas id="bgfx"></canvas>
+  <div class="bgdeco"></div>
+  <div class="hud">
+    <div class="hudrow">
+      <button id="pauseBtn" class="btn round orange small" aria-label="pause">❚❚</button>
+      <div id="lvlName" class="lvltitle">Level</div>
+      <div id="moves" class="moves"><b>0</b><span data-t="chaalein|moves">chaalein</span></div>
+    </div>
+    <div class="hudrow" style="justify-content:center"><div id="bossbar" class="bossbar"><div class="face"></div><div class="hp"><i></i></div></div></div>
+    <div id="goals" class="goals"></div>
+    <div id="scorebar" class="scorebar"></div>
+  </div>
+  <div id="boardWrap"><canvas id="board"></canvas></div>
+  <div id="boosters" class="boosters"><div id="dabbuGame" class="dabbuGame"></div></div>
+</section>
+
+<div id="praise"></div>
+<canvas id="confetti"></canvas>
+<div id="modal"></div>
+<div id="storyBg"></div>
+<div id="dlg" class="dlg"><div class="box"><div class="who"></div><div class="name"></div><div class="txt"></div><div class="tap">tap ▸</div></div></div>
+<div id="toast"></div>
+<div id="lid"></div>
+<div id="adminRoot" hidden></div>
+
+<script src="js/firebase-config.js"></script>
+<script src="js/loader.js"></script>
+<script src="js/vendor/three.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/worlds.js"></script>
+<script src="js/levels.js"></script>
+<script src="js/levels-data.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/art.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/board.js"></script>
+<script src="js/chars.js"></script>
+<script src="js/art3d.js"></script>
+<script src="js/chars3d.js"></script>
+<script src="js/scenes.js"></script>
+<script src="js/save.js"></script>
+<script src="js/backend.js"></script>
+<script src="js/icons.js"></script>
+<script src="js/features.js"></script>
+<script src="js/monetize.js"></script>
+<script src="js/ui.js"></script>
+<script src="admin/admin.js"></script>
+<script>Promise.all([window.MM_READY || Promise.resolve(), new Promise(r => document.readyState !== 'loading' ? r() : document.addEventListener('DOMContentLoaded', r))]).then(() => { if (location.hash === '#admin') MM_ADMIN.boot(document.getElementById('adminRoot')); else MM_UI.boot(); });
+window.addEventListener('hashchange', () => { if (location.hash === '#admin' || document.getElementById('adminRoot').hidden === false) location.reload(); });</script>
+</body>
+</html>

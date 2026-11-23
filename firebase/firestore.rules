@@ -1,0 +1,45 @@
+rules_version = '2';
+// Masala Mela — Firestore security rules (Deific Digital)
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() { return request.auth != null; }
+    function isAdmin() { return signedIn() && request.auth.token.admin == true; }
+
+    // Live game config: everyone reads, only admins write
+    match /config/{id} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // Player profile + cloud save: only the player (and admins)
+    match /users/{uid} {
+      allow read: if signedIn() && (request.auth.uid == uid || isAdmin());
+      allow create: if signedIn() && request.auth.uid == uid && request.resource.data.banned == false;
+      // players cannot unban themselves or clear an admin reset
+      allow update: if isAdmin() || (signedIn() && request.auth.uid == uid
+                      && !request.resource.data.diff(resource.data).affectedKeys().hasAny(['banned', 'resetAt']));
+      allow delete: if isAdmin() || (signedIn() && request.auth.uid == uid); // in-app account deletion
+    }
+
+    // Public leaderboard: name, stars, level only (no phone/email)
+    match /leaderboard/{uid} {
+      allow read: if signedIn();
+      allow create, update: if signedIn() && request.auth.uid == uid
+                   && request.resource.data.keys().hasOnly(['name', 'stars', 'level', 'ts']);
+      allow delete: if isAdmin() || (signedIn() && request.auth.uid == uid);
+    }
+
+    // Daily counters for the dashboard: clients only increment, admins read
+    match /stats/{day} {
+      allow read: if isAdmin();
+      allow create, update: if signedIn();
+      allow delete: if isAdmin();
+    }
+
+    // Gifts and announcements from the admin panel
+    match /messages/{id} {
+      allow read: if signedIn() && (resource.data.to == 'all' || resource.data.to == request.auth.uid);
+      allow write: if isAdmin();
+    }
+  }
+}

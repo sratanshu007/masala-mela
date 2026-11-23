@@ -1,0 +1,12 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../www/css/style.css"></head><body style="margin:0;background:#222;overflow:visible;height:auto">
+<div id="g" style="display:grid;grid-template-columns:repeat(5,195px);gap:4px;padding:4px"></div>
+<script src="../www/js/worlds.js"></script><script src="../www/js/levels.js"></script><script src="../www/js/scenes.js"></script>
+<script>
+const g = document.getElementById('g');
+MM_DATA.WORLDS.forEach(W => {
+  const c = document.createElement('canvas'); c.width = 390; c.height = 844; c.style.width = '195px';
+  const ctx = c.getContext('2d'); ctx.drawImage(MM_SCENES.paintStatic(W, 390, 844), 0, 0);
+  g.appendChild(c);
+});
+window.done = true;
+</script></body></html>

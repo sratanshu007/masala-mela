@@ -1,0 +1,32 @@
+{
+  "name": "masala-mela",
+  "version": "1.0.0",
+  "description": "Masala Mela: Swaad Bachao — desi food match-3 game by Deific Digital",
+  "author": "Deific Digital <hello@deificdigital.com>",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "calibrate": "node tools/calibrate.js 40",
+    "serve": "npx http-server www -p 8080 -c-1",
+    "sync": "npx cap sync",
+    "android": "npx cap sync android && npx cap open android",
+    "ios": "npx cap sync ios && npx cap open ios",
+    "assets": "npx @capacitor/assets generate --iconBackgroundColor '#FF8A3D' --splashBackgroundColor '#E8590C'"
+  },
+  "dependencies": {
+    "@capacitor-community/admob": "^8.0.0",
+    "@capacitor/android": "^8.0.0",
+    "@capacitor/app": "^8.0.0",
+    "@capacitor/core": "^8.0.0",
+    "@capacitor/haptics": "^8.0.0",
+    "@capacitor/ios": "^8.0.0",
+    "@capacitor/share": "^8.0.0",
+    "@capacitor/splash-screen": "^8.0.0",
+    "@capacitor/status-bar": "^8.0.0",
+    "cordova-plugin-purchase": "^13.12.0"
+  },
+  "devDependencies": {
+    "@capacitor/assets": "^3.0.5",
+    "@capacitor/cli": "^8.0.0"
+  }
+}

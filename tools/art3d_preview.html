@@ -1,0 +1,12 @@
+<!doctype html><html><head><meta charset="utf-8"></head><body style="margin:0;background:#F6E3C0">
+<div id="g" style="display:grid;grid-template-columns:repeat(8,128px);gap:6px;padding:10px"></div>
+<script src="../www/js/vendor/three.min.js"></script>
+<script src="../www/js/worlds.js"></script><script src="../www/js/art.js"></script><script src="../www/js/chars.js"></script><script src="../www/js/art3d.js"></script>
+<script>
+MM_ART3D.build().then(ok => {
+  const g = document.getElementById('g');
+  const keys = ['p0','p1','p2','p3','p4','p5','d','ing1','s0h','s1v','s2k','s3k2','s4h','s5k','ing2','lice','btiffin2','btiffin1','bmatka2','bhandi2','bfog1','btawa1','btawa1h','tile0','dabbu_happy','dabbu_wow','dabbu_sad','tile1'];
+  keys.forEach(k => { const c = MM_ART3D.sprites[k]; if (!c) return; const d = document.createElement('div'); d.style.cssText='width:128px;height:128px;background:#7a4a24;border-radius:12px;position:relative'; c.style.cssText='width:128px;height:128px'; d.appendChild(c); g.appendChild(d); });
+  window.done = ok;
+});
+</script></body></html>
